@@ -158,6 +158,9 @@ class Menu extends Component<MenuProps, MenuState> {
   };
 
   setMenuPosition() {
+    if (!this.menuRef) {
+      return;
+    }
     const { innerWidth: windowWidth, innerHeight: windowHeight } = window;
     const { offsetWidth: menuWidth, offsetHeight: menuHeight } = this.menuRef;
     let { x, y } = this.state;
