@@ -191,7 +191,7 @@ class Menu extends Component<MenuProps, MenuState> {
     if (
       e.type === 'touchend' &&
       (!pos.x || !pos.y) &&
-      (e.changedTouches && e.changedTouches.length > 0)
+      e.changedTouches && e.changedTouches.length > 0
     ) {
       pos.x = e.changedTouches[0].clientX;
       pos.y = e.changedTouches[0].clientY;
